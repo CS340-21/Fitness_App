@@ -107,12 +107,12 @@ public class Timer extends AppCompatActivity {
         int reps, min, sec;
 
         if (repsEditText.length() == 0){
-            repsEditText.setError("Please enter a positive number of at least 0");
+            repsEditText.setError("Please enter a positive number of at least 1");
             return false;
         } else {
             reps = Integer.parseInt(repsEditText.getText().toString());
-            if (reps > 30) {
-                repsEditText.setError("Please enter a number between 0 and 30");
+            if (reps > 30 || reps < 1) {
+                repsEditText.setError("Please enter a number between 1 and 30");
                 return false;
             }
         }
