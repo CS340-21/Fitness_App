@@ -21,10 +21,17 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
 public class Journal extends AppCompatActivity {
+    /*
+        Variable Declarations
+     */
     EditText JournalText1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        /*
+            Boiler Plate Code for instantiating the activity's view,
+            the appbar, and the "back" button in the appbar
+         */
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_journal);
 
@@ -36,6 +43,9 @@ public class Journal extends AppCompatActivity {
             ab.setDisplayHomeAsUpEnabled(true);
         }
 
+        /*
+            Create the save button
+         */
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.floatingActionButton1);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,17 +54,24 @@ public class Journal extends AppCompatActivity {
             }
         });
 
+        /*
+            Automatically open "Note1.txt"
+         */
         JournalText1 = (EditText) findViewById(R.id.EditText1);
         JournalText1.setText(Open("Note1.txt"));
     }
 
+    /*
+        Function that saves the contents of the EditText field
+        into file "fileName"
+     */
     public void Save(String fileName) {
         try {
             OutputStreamWriter out =
                     new OutputStreamWriter(openFileOutput(fileName, 0));
-            out.write(String.valueOf(JournalText1));
+            out.write(JournalText1.getText().toString());
             out.close();
-            Toast.makeText(this, "Note Saved!" + String.valueOf(JournalText1), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Note Saved!", Toast.LENGTH_SHORT).show();
         } catch (FileNotFoundException e) {
             Toast.makeText(this, "Exception: " + e.toString(), Toast.LENGTH_LONG).show();
             //e.printStackTrace();
@@ -64,11 +81,18 @@ public class Journal extends AppCompatActivity {
         }
     }
 
+    /*
+        Boolean to determine whether the requested file exists
+     */
     public boolean FileExist(String fname) {
         File file = getBaseContext().getFileStreamPath(fname);
         return file.exists();
     }
 
+    /*
+        Function that opens the requested filename and returns
+        its contents as a string
+     */
     public String Open(String fileName) {
         String content = "";
         if (FileExist(fileName)) {
