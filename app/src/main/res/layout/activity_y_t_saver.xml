@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".YTSaver">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarYT"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".YTSaver">
+
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="225dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="66dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="8dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="Youtube URL"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/SaveNameBox"
+            app:layout_constraintEnd_toStartOf="@+id/saveButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginBottom="8dp"
+            android:text="save"
+            app:layout_constraintBottom_toTopOf="@+id/SaveNameBox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName" />
+
+        <EditText
+            android:id="@+id/SaveNameBox"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="23dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="Save Name"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/List"
+            android:layout_width="279dp"
+            android:layout_height="400dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginBottom="44dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="57dp"
+            android:layout_marginBottom="24dp"
+            android:text="Video Links"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/List"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SaveNameBox" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
