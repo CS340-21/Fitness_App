@@ -9,7 +9,6 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -24,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbarYT);
         setSupportActionBar(toolbar);
 
         item1 = findViewById(R.id.item1);
@@ -58,6 +57,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             item4.setTextColor(def);
             int size = item2.getWidth();
             select.animate().x(size).setDuration(100);
+
+            startActivity(new Intent(this, YTSaver.class));
         } else if (view.getId() == R.id.item3){
             item1.setTextColor(def);
             item3.setTextColor(Color.WHITE);
@@ -65,6 +66,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             item4.setTextColor(def);
             int size = item2.getWidth() * 2;
             select.animate().x(size).setDuration(100);
+
+            startActivity(new Intent(this, CalorieCounter.class));
         } else if (view.getId() == R.id.item4){
             item1.setTextColor(def);
             item4.setTextColor(Color.WHITE);
