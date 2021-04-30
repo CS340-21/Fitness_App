@@ -14,7 +14,11 @@ To summarize, we were not able to create the full product due to time management
 
 # Customer value
 
+There has been no changes in our customer value or primary customers.
+
 # Technology
+
+
 
 # Team
 
