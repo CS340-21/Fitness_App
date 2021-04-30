@@ -88,3 +88,14 @@ We completed most of our goals by creating our minimal viable project. What we d
 
 # Reflection
 
+## What went well
+
+Everyone did what was expected of them. The software we used to develop the app, github, android studio, etc., all took some learning, but worked beautifully. The development team also fixed the most heinous of bugs in the code. Meetings were also very porductive. If one member could not meet with the other two, the whole team had no problem rescheduling or discussing their progress/issues with the manager.
+
+## What needs improvement
+
+Planning, time management, and the code could have been better. We should have started the project at least 1 month prior to when we did start it. As for the code, what we have is not necessarily bad, but there are a few extra traits we could have added to our features like adding a pause/resume button to our timer or open youtube in our app using the youtube API. However, these ideas can be implemented in any other future works.
+
+## Were we successful?
+
+As a team, we would say we accomplished 70%-80% of our goal. Asside from providing a minimal viable project, The development gained invaluable experience in android programming and management took away key lessons in running a team. 
