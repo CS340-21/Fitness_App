@@ -18,11 +18,73 @@ There has been no changes in our customer value or primary customers.
 
 # Technology
 
+<p align = "center">
+  <img src="https://github.com/CS340-21/Fitness_App/blob/main/finalarch.png">
+</p>
 
+There has not been any major change in architecture other than not implementing the workout template planner or any of the planned API's (google, youtube, etc.) Because there was no status report, we will only discuss what features succeeded. Firt is the home screen. 
+
+Initially, we planned to have the app allow the user to swipe side to side to access each feature. So far, we the app will open a feature by hitting its link at the top of the screen. To exit a feature, the user would tap an arrow at the top-left of the screen to return to the home screen.
+
+### Timer
+
+<p align = "center">
+  <img src="https://github.com/CS340-21/Fitness_App/blob/main/timer.png">
+</p>
+
+This feature allows the user to type in how many repetitions they want to complete, and how long they are in either minutes or seconds. The user would write in any whole number bettween 0 and 59. Anything else would result in an error. We tested this by inputting legal input and illegal input such as mixed numbers, letters, and negative numbers. The error checking successfully handled these cases. There was however a bug with when we were inputting numbers. Add addition input while already running the timer resulted in the clock jumping bettween random numbers.
+
+### Youtube video linksaver
+
+<p align = "center">
+  <img src="https://github.com/CS340-21/Fitness_App/blob/main/yt.png">
+</p>
+
+This feature allowed the user to youtube links and rename them to make it easier to remember what the link actually takes them to. We error checked this by adding code that only allowed saving links that actually work. What we could not get to work properly was saving links from youtube only.
+
+### Calorie Calculator
+
+<p align = "center">
+  <img src="https://github.com/CS340-21/Fitness_App/blob/main/cal.png">
+</p>
+
+This feature enabled the user to record and calculate their caloric intake for the day. The user would type in what they ate and the number of calories the item has. This would then be added into the list and the total number of calories consumed would be displayed. To reset the list, the user would hit the reset button, clearing the list of foods and calories recorded. To test this, we put in random food names and random numbers. The app let us save virtualy any word we wanted and but would only allow positive numbers to be saved. We considered this to be successful.
+
+### Journal
+
+<p align = "center">
+  <img src="https://github.com/CS340-21/Fitness_App/blob/main/journal.png">
+</p>
+
+Finally, we have the journal. This worked by setting everything else in the app as invisible while setting this feature as the only thing visible. Anything the user wrote in the journal would be saved to a file. To save their progress, the user would hit the save button on the bottom-right corner of the screen. This was tested by typing in random input and saving or not saving it then leaving then returning to the feature to see if it correctly saved or did not save. This was successful.
 
 # Team
 
+#### Emory Swanger
+ Role: Manager 
+ Accomplishments:
+ - Scheduled meetings
+ - kept the project on track
+ - controlled the repo
+ - provided the background code
+
+#### William Hannon
+ Role: Developer 
+ Accomplishments:
+ - programmed timer feature
+ - programmed journal feature
+ 
+#### Kincaid McGee
+ Role: Developer 
+ Accomplishments:
+ - programmed calorie counter feature
+ - programmed youtube feature
+ 
+Over all, the roles were pretty static but everyone did their fair share of the work. The tasks did become more specialized, especially the features. The developers were both given 2 different features to complete, which they did. The manager mostly kept to their non-programming role with the exception to implementing base code for the developers to build off of.
+
 # Project Management
+
+
 
 # Team Management
 
