@@ -84,9 +84,7 @@ Over all, the roles were pretty static but everyone did their fair share of the 
 
 # Project Management
 
-
-
-# Team Management
+We completed most of our goals by creating our minimal viable project. What we did not finish were essentially the metaphorical whipped cream and cherry on top of our cake of a product. We did not implement our 5th feature, a workout template generator, more complex traits for the features, and we did not have time to learn and implement graphics into our product. Their is one main reason for this: time management. We the team should have started the project earlier to get a better head start on the project and to try and learn how to implement the desired API's and graphic design. As stated earlier, everyone had too many other priorities to focus on rather than the project.
 
 # Reflection
 
